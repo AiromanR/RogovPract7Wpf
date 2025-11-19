@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RogovPract7Wpf/1.0.0": {
+        "runtime": {
+          "RogovPract7Wpf.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RogovPract7Wpf/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

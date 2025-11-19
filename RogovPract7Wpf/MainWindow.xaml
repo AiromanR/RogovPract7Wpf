@@ -1,0 +1,246 @@
+﻿<Window x:Class="RogovPract7Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RogovPract7Wpf"
+        mc:Ignorable="d"
+        Title="prakt7" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60px"></RowDefinition>
+            <RowDefinition Height="165px"></RowDefinition>
+            <RowDefinition Height="105px"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60px"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="Reg">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Margin="2" Content="Имя:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="2" Content="Фамилия:" Grid.Row="1" Grid.Column="0"/>
+                <Label Margin="2" Content="Отчество:" Grid.Row="2" Grid.Column="0"/>
+                <Label Margin="2" Content="Специальность:" Grid.Row="3" Grid.Column="0"/>
+                <Label Margin="2" Content="Пароль:" Grid.Row="4" Grid.Column="0"/>
+                <Label Margin="2" Content="Подтвердите пароль:" Grid.Row="5" Grid.Column="0"/>
+
+                <TextBox Text="{Binding Name, Mode=TwoWay}" Margin="5" Grid.Row="0" Grid.Column="1" />
+                <TextBox Text="{Binding Surname, Mode=TwoWay}" Margin="5" Grid.Row="1" Grid.Column="1" />
+                <TextBox Text="{Binding Patronimic, Mode=TwoWay}" Margin="5" Grid.Row="2" Grid.Column="1" />
+                <TextBox Text="{Binding Specialization, Mode=TwoWay}" Margin="5" Grid.Row="3" Grid.Column="1" />
+                <TextBox Text="{Binding Password, Mode=OneWayToSource}" Margin="5" Grid.Row="4" Grid.Column="1"/>
+                <TextBox Text="{Binding ConfirmPassword, Mode=OneWayToSource}" Margin="5" Grid.Row="5" Grid.Column="1"/>
+
+                <Button Name="RegBtn" Margin="5" Grid.ColumnSpan="2" Grid.Row="6" Content="Регистрация" Click="Reg_Click"/>
+            </Grid>
+        </Border>
+        
+        <Border Grid.Row="2" Grid.Column="0" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="Log">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="5" Content="ID:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="5" Content="Пароль:" Grid.Row="1" Grid.Column="0"/>
+
+                <TextBox Text="{Binding Id, Mode=OneWayToSource}" Margin="5" Grid.Row="0" Grid.Column="1" MaxLength="5"/>
+                <TextBox Text="{Binding Password, Mode=OneWayToSource}" Margin="5" Grid.Row="1" Grid.Column="1" />
+
+                <Button Name="LoginBtn" Margin="5" Grid.ColumnSpan="2" Grid.Row="2" Content="Вход" Click="Login_Click"/>
+            </Grid>
+        </Border>   
+        
+        <Border Grid.Row="3" Grid.Column="0" BorderThickness="1" BorderBrush="Gray">
+            <Grid HorizontalAlignment="Stretch" x:Name="DocInfo">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0">ID:</Label>
+                <Label Grid.Row="0" Grid.Column="1" Height="35" Content="{Binding Id}"></Label>
+                <Label Grid.Row="1" Grid.Column="0">Фамилия:</Label>
+                <Label Grid.Row="1" Grid.Column="1" Height="35" Content="{Binding Surname}"></Label>
+                <Label Grid.Row="2" Grid.Column="0">Имя:</Label>
+                <Label Grid.Row="2" Grid.Column="1" Height="35" Content="{Binding Name}"></Label>
+                <Label Grid.Row="3" Grid.Column="0">Отчество:</Label>
+                <Label Grid.Row="3" Grid.Column="1" Height="35" Content="{Binding Patronimic}"></Label>
+                <Label Grid.Row="4" Grid.Column="0">Специальность:</Label>
+                <Label Grid.Row="4" Grid.Column="1" Height="35" Content="{Binding Specialization}"></Label>
+                <Label Grid.Row="5" Grid.Column="0">Пароль:</Label>
+                <Label Grid.Row="5" Grid.Column="1" Height="35" Content="{Binding Password}"></Label>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="1" Grid.Row="0" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="SearchPatient">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.ColumnSpan="2">Введите индентификатор:</Label>
+                <TextBox VerticalContentAlignment="Center" Grid.Row="1" Margin="5 0 5 5" Text="{Binding Id, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+                <Button Click="SearchPacient_Click" Margin="5 0 5 5" Grid.Row="1" Grid.Column="1">Найти</Button>
+            </Grid>
+        </Border>
+        
+        <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="SavePatient">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="145"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Margin="5">Фамилия:</Label>
+                <Label Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" VerticalContentAlignment="Center" Content="{Binding Surname, UpdateSourceTrigger=PropertyChanged}"></Label>
+                <Label Grid.Row="1" Grid.Column="0" Margin="5">Имя:</Label>
+                <Label Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" VerticalContentAlignment="Center" Content="{Binding Name, UpdateSourceTrigger=PropertyChanged}"></Label>
+                <Label Grid.Row="2" Grid.Column="0" Margin="5">Отчество:</Label>
+                <Label Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1" VerticalContentAlignment="Center" Content="{Binding Patronimic, UpdateSourceTrigger=PropertyChanged}"></Label>
+                <Label Grid.Row="3" Grid.Column="0" Margin="5">День Рождения:</Label>
+                <DatePicker Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" SelectedDate="{Binding Birthday, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" VerticalContentAlignment="Center"/>
+                <Label Grid.Row="4" Grid.Column="0" Margin="5 5 0 5">Последнее посещение:</Label>
+                <DatePicker Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" SelectedDate="{Binding LastAppointment, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" VerticalContentAlignment="Center"/>
+                <Label Grid.Row="5" Grid.Column="0" Margin="5">Последний доктор:</Label>
+                <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" VerticalContentAlignment="Center" Content="{Binding LastDoctor, UpdateSourceTrigger=PropertyChanged}"></Label>
+                <Label Grid.Row="6" Grid.Column="0" Margin="5">Диагноз:</Label>
+                <TextBox VerticalContentAlignment="Center" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Margin="5 5 5 5" Text="{Binding Diagnosis, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                <Label Grid.Row="7" Grid.Column="0" Margin="5">Рекомендации:</Label>
+                <TextBox HorizontalAlignment="Stretch" Grid.Row="8" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="5 5 5 5" Text="{Binding Recomendations, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></TextBox>
+                <Button Grid.Row="9" Grid.ColumnSpan="3" Click="SaveChangesPacient_Click" Margin="5 5 5 5">Сохранить</Button>
+            </Grid>
+        </Border>
+        
+        <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="AddPacient" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="5" Content="Имя:" Grid.Row="0" Grid.Column="0"/>
+                <Label Margin="5" Content="Фамилия:" Grid.Row="1" Grid.Column="0"/>
+                <Label Margin="5" Content="Отчество:" Grid.Row="2" Grid.Column="0"/>
+                <Label Margin="5" Content="Дата рождения:" Grid.Row="3" Grid.Column="0"/>
+                <Label Margin="5" Content="Последний визит:" Grid.Row="4" Grid.Column="0"/>
+                <Label Margin="5" Content="Диагноз:" Grid.Row="5" Grid.Column="0"/>
+                <Label Margin="5" Content="Рекомендации:" Grid.Row="6" Grid.Column="0"/>
+
+                <TextBox Text="{Binding Name, Mode=TwoWay}" Margin="5" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <TextBox Text="{Binding Surname, Mode=TwoWay}" Margin="5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <TextBox Text="{Binding Patronimic, Mode=TwoWay}" Margin="5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <DatePicker SelectedDate="{Binding Birthday, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <DatePicker SelectedDate="{Binding LastAppointment, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <TextBox Text="{Binding Diagnosis, Mode=TwoWay}" Margin="5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <TextBox Text="{Binding Recomendations, Mode=TwoWay}" Margin="5" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center"/>
+
+                <Button Name="AddPacientBtn" Margin="5" Grid.ColumnSpan="2" Grid.Row="7" Content="Добавить пациента" Click="AddPacient_Click"/>
+            </Grid>
+        </Border>
+
+        <Border Grid.Column="2" Grid.Row="3" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="EditPacient">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Имя:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+                <Label Content="Фамилия:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+                <Label Content="Отчество:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+                <Label Content="Дата рождения:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+
+                <TextBox Text="{Binding Name, Mode=TwoWay}" Margin="5" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <TextBox Text="{Binding Surname, Mode=TwoWay}" Margin="5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <TextBox Text="{Binding Patronimic, Mode=TwoWay}" Margin="5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
+                <DatePicker SelectedDate="{Binding Birthday, Mode=TwoWay}" DisplayDateStart="1910-01-01" Margin="5" DisplayDateEnd="{x:Static system:DateTime.Today}" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"/>
+
+                <Button Margin="5" Grid.Row="4" Content="Сбросить" Click="ResetPacient_Click"/>
+                <Button Margin="5" Grid.Row="4" Grid.Column="1" Content="Сохранить" Click="SaveChangesPacient_Click" />
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="4" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Gray">
+            <Grid x:Name="SysStatus" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Label>Всего Пациентов:</Label>
+                <Label Grid.Column="1" Content="{Binding PacientsCount, UpdateSourceTrigger=PropertyChanged}"></Label>
+                <Label Grid.Column="0" Grid.Row="1">Всего Докторов:</Label>
+                <Label Grid.Column="1" Grid.Row="1" Content="{Binding DoctorsCount, UpdateSourceTrigger=PropertyChanged}"></Label>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
