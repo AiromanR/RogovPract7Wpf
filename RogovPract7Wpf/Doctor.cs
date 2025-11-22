@@ -139,7 +139,7 @@ namespace RogovPract7Wpf
 
         public Pacient AddPacient(string name, string surname, string patronimic, DateTime bd, DateTime lastAppointment, int lastDoc, string diagnosis, string recomendations)
         {
-            if (name == "" || surname == "" || patronimic == "" || diagnosis == "" || recomendations == "")
+            if (name == "" || surname == "" || patronimic == "")
                 throw new ArgumentException("Все поля должны быть заполнены");
 
             if (bd > lastAppointment)

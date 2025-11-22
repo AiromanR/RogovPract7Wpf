@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|solutionrelative:rogovpract7wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|c:\\users\\drunchik\\source\\repos\\rogovpract7wpf\\rogovpract7wpf\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|solutionrelative:rogovpract7wpf\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|c:\\users\\drunchik\\source\\repos\\rogovpract7wpf\\rogovpract7wpf\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|solutionrelative:rogovpract7wpf\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|c:\\users\\drunchik\\source\\repos\\rogovpract7wpf\\rogovpract7wpf\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|solutionrelative:rogovpract7wpf\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|c:\\users\\drunchik\\source\\repos\\rogovpract7wpf\\rogovpract7wpf\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{93D41F5F-5F63-49B2-9703-C60D82E10C03}|RogovPract7Wpf\\RogovPract7Wpf.csproj|solutionrelative:rogovpract7wpf\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -68,27 +68,27 @@
               "RelativeDocumentMoniker": "RogovPract7Wpf\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Drunchik\\source\\repos\\RogovPract7Wpf\\RogovPract7Wpf\\MainWindow.xaml.cs",
               "RelativeToolTip": "RogovPract7Wpf\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwCcAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAuwEUAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T14:33:38.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Pacient.cs",
               "DocumentMoniker": "C:\\Users\\Drunchik\\source\\repos\\RogovPract7Wpf\\RogovPract7Wpf\\Pacient.cs",
               "RelativeDocumentMoniker": "RogovPract7Wpf\\Pacient.cs",
               "ToolTip": "C:\\Users\\Drunchik\\source\\repos\\RogovPract7Wpf\\RogovPract7Wpf\\Pacient.cs",
               "RelativeToolTip": "RogovPract7Wpf\\Pacient.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAqwHIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAYwJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-18T11:58:12.691Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Status.cs",
               "DocumentMoniker": "C:\\Users\\Drunchik\\source\\repos\\RogovPract7Wpf\\RogovPract7Wpf\\Status.cs",
               "RelativeDocumentMoniker": "RogovPract7Wpf\\Status.cs",
@@ -96,20 +96,20 @@
               "RelativeToolTip": "RogovPract7Wpf\\Status.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAmwCAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T17:55:13.925Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T17:55:13.925Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Doctor.cs",
               "DocumentMoniker": "C:\\Users\\Drunchik\\source\\repos\\RogovPract7Wpf\\RogovPract7Wpf\\Doctor.cs",
               "RelativeDocumentMoniker": "RogovPract7Wpf\\Doctor.cs",
               "ToolTip": "C:\\Users\\Drunchik\\source\\repos\\RogovPract7Wpf\\RogovPract7Wpf\\Doctor.cs",
               "RelativeToolTip": "RogovPract7Wpf\\Doctor.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAADwv5cAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAiwI0AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T11:58:11.107Z"
+              "WhenOpened": "2025-11-18T11:58:11.107Z",
+              "EditorCaption": ""
             }
           ]
         }

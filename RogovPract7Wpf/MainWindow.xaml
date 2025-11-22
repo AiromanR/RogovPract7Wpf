@@ -147,9 +147,9 @@
                 <Label Grid.Row="2" Grid.Column="0" Margin="5">Отчество:</Label>
                 <Label Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1" VerticalContentAlignment="Center" Content="{Binding Patronimic, UpdateSourceTrigger=PropertyChanged}"></Label>
                 <Label Grid.Row="3" Grid.Column="0" Margin="5">День Рождения:</Label>
-                <DatePicker Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" SelectedDate="{Binding Birthday, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" VerticalContentAlignment="Center"/>
+                <DatePicker Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" SelectedDate="{Binding Birthday, Mode=TwoWay}" DisplayDateStart="1910-01-01" Margin="5" VerticalContentAlignment="Center" IsEnabled="False"/>
                 <Label Grid.Row="4" Grid.Column="0" Margin="5 5 0 5">Последнее посещение:</Label>
-                <DatePicker Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" SelectedDate="{Binding LastAppointment, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" VerticalContentAlignment="Center"/>
+                <DatePicker Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" SelectedDate="{Binding LastAppointment, Mode=TwoWay}" DisplayDateStart="1910-01-01" Margin="5" VerticalContentAlignment="Center" IsEnabled="False"/>
                 <Label Grid.Row="5" Grid.Column="0" Margin="5">Последний доктор:</Label>
                 <Label Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" VerticalContentAlignment="Center" Content="{Binding LastDoctor, UpdateSourceTrigger=PropertyChanged}"></Label>
                 <Label Grid.Row="6" Grid.Column="0" Margin="5">Диагноз:</Label>
@@ -159,7 +159,7 @@
                 <Button Grid.Row="9" Grid.ColumnSpan="3" Click="SaveChangesPacient_Click" Margin="5 5 5 5">Сохранить</Button>
             </Grid>
         </Border>
-        
+
         <Border Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" BorderThickness="1" BorderBrush="Gray">
             <Grid x:Name="AddPacient" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3">
                 <Grid.ColumnDefinitions>
@@ -173,8 +173,6 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
                 </Grid.RowDefinitions>
 
                 <Label Margin="5" Content="Имя:" Grid.Row="0" Grid.Column="0"/>
@@ -182,18 +180,14 @@
                 <Label Margin="5" Content="Отчество:" Grid.Row="2" Grid.Column="0"/>
                 <Label Margin="5" Content="Дата рождения:" Grid.Row="3" Grid.Column="0"/>
                 <Label Margin="5" Content="Последний визит:" Grid.Row="4" Grid.Column="0"/>
-                <Label Margin="5" Content="Диагноз:" Grid.Row="5" Grid.Column="0"/>
-                <Label Margin="5" Content="Рекомендации:" Grid.Row="6" Grid.Column="0"/>
 
                 <TextBox Text="{Binding Name, Mode=TwoWay}" Margin="5" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"/>
                 <TextBox Text="{Binding Surname, Mode=TwoWay}" Margin="5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center"/>
                 <TextBox Text="{Binding Patronimic, Mode=TwoWay}" Margin="5" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center"/>
                 <DatePicker SelectedDate="{Binding Birthday, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center"/>
                 <DatePicker SelectedDate="{Binding LastAppointment, Mode=TwoWay}" DisplayDateStart="1910-01-01" DisplayDateEnd="{x:Static system:DateTime.Today}" Margin="5" Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center"/>
-                <TextBox Text="{Binding Diagnosis, Mode=TwoWay}" Margin="5" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center"/>
-                <TextBox Text="{Binding Recomendations, Mode=TwoWay}" Margin="5" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center"/>
 
-                <Button Name="AddPacientBtn" Margin="5" Grid.ColumnSpan="2" Grid.Row="7" Content="Добавить пациента" Click="AddPacient_Click"/>
+                <Button Name="AddPacientBtn" Margin="5" Grid.ColumnSpan="2" Grid.Row="5" Content="Добавить пациента" Click="AddPacient_Click"/>
             </Grid>
         </Border>
 

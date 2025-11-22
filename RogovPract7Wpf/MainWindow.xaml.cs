@@ -68,7 +68,6 @@ namespace RogovPract7Wpf
             try
             {
                 doctor.Login(doctor.Id.ToString(), doctor.Password);
-                MessageBox.Show("Вход выполнен", "Успешно");
                 ClearTextBoxes(Reg);
                 ClearTextBoxes(Log);
                 DocInfo.DataContext = doctor;
@@ -85,7 +84,7 @@ namespace RogovPract7Wpf
             {
                 var newPac = doctor.AddPacient(pacientAdd.Name, pacientAdd.Surname, pacientAdd.Patronimic,
                                  pacientAdd.Birthday, pacientAdd.LastAppointment, doctor.Id,
-                                 pacientAdd.Diagnosis, pacientAdd.Recomendations);
+                                 "", "");
                 MessageBox.Show($"Пациент добавлен. ID: {newPac.Id}", "Успешно");
 
                 pacientAdd.pacients[newPac.Id] = newPac;
